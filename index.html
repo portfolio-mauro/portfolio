@@ -16,8 +16,8 @@
 	<main>
 		<section class="intro">
 			<h1>Hi!<br>I'm Mauro</h1>
-			<h2>UX & Service Designer</h2>
-			<div class="selected-projects-link">Selected projects <span class="arrow">&#8595;</span></div>
+			<h2><span class="highlight-orange">UX & Service Designer</span></h2>
+			<div class="selected-projects-link" id="scroll-to-projects">Selected projects ⬇</div>
 		</section>
 		<section class="profile">
 			<div class="profile-img">
@@ -30,31 +30,53 @@
 			</div>
 		</section>
 		<section class="projects">
-			<h4>SELECTED PROJECTS</h4>
+			<h4 id="selected-projects">SELECTED PROJECTS</h4>
+			</main>
+			<script>
+			// Smooth scroll for 'Selected projects' link
+			document.getElementById('scroll-to-projects').addEventListener('click', function() {
+				document.getElementById('selected-projects').scrollIntoView({ behavior: 'smooth' });
+			});
+			// Animate the selected projects link and arrow
+			const selProj = document.getElementById('scroll-to-projects');
+			let offset = 0;
+			setInterval(() => {
+				offset = (offset + 1) % 30;
+				selProj.style.transform = `translateY(${offset/3}px)`;
+			}, 40);
+			</script>
 			<div class="projects-grid">
 				<div class="project-card">
-					<img src="assets/home/tile_bilg.webp" alt="Project 1">
-					<div class="project-tags"><span>User Research</span><span>UX</span></div>
+					<img src="assets/home/tile_playtestcloud.webp" alt="Project: Leveling Up Game Testing">
+					<div class="project-title-overlay">Leveling Up Game Testing</div>
 				</div>
 				<div class="project-card">
-					<img src="assets/home/tile_gur.webp" alt="Project 2">
-					<div class="project-tags"><span>User Research</span><span>UX</span><span>UI</span></div>
+					<img src="assets/home/tile_website.webp" alt="Project: Website Redesign">
+					<div class="project-title-overlay">Website Redesign</div>
 				</div>
 				<div class="project-card">
-					<img src="assets/home/tile_vr.webp" alt="Project 3">
-					<div class="project-tags"><span>User Research</span><span>UI</span><span>Project Management</span><span>3D Modeling</span></div>
+					<img src="assets/home/tile_gur.webp" alt="Project: Testing Jurassic World Alive">
+					<div class="project-title-overlay">Testing Jurassic World Alive</div>
 				</div>
 				<div class="project-card">
-					<img src="assets/home/tile_insurance_calculator.webp" alt="Project 4">
-					<div class="project-tags"><span>User Research</span><span>UX</span><span>UI</span><span>Project Management</span></div>
+					<img src="assets/home/tile_insurance_calculator.webp" alt="Project: Relaunch Insurance Calculator">
+					<div class="project-title-overlay">Relaunch Insurance Calculator</div>
 				</div>
 				<div class="project-card">
-					<img src="assets/home/tile_insurance_web.webp" alt="Project 5">
-					<div class="project-tags"><span>User Research</span><span>UX</span><span>UI</span></div>
+					<img src="assets/home/tile_vr.webp" alt="Project: Avatars in collaborative VR">
+					<div class="project-title-overlay">Avatars in collaborative VR</div>
 				</div>
 				<div class="project-card">
-					<img src="assets/home/tile_other_projects.webp" alt="Project 6">
-					<div class="project-tags"><span>UX</span><span>UI</span><span>Video</span><span>Graphic Design</span></div>
+					<img src="assets/home/tile_insurance_web.webp" alt="Project: Website Relaunch">
+					<div class="project-title-overlay">Website Relaunch</div>
+				</div>
+                <div class="project-card">
+					<img src="assets/home/tile_bilg.webp" alt="Project: Mobile App">
+					<div class="project-title-overlay">Mobile App</div>
+				</div>
+				<div class="project-card">
+					<img src="assets/home/tile_other_projects.webp" alt="Project: Other Projects">
+					<div class="project-title-overlay">Other Projects</div>
 				</div>
 			</div>
 		</section>
