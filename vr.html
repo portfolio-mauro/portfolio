@@ -1,16 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avatars in collaborative VR</title>
+    <title>Avatars in collaborative virtual reality</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header><nav><a href="index.html">Home</a></nav></header>
-    <main>
-        <h1>Avatars in collaborative VR</h1>
-        <p>Project details coming soon.</p>
-    </main>
+    <div class="hero">
+        <header><a href="index.html">Home</a></header>
+        <img src="assets/vr/vr_hero.webp" alt="VR avatars in a collaborative environment">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1>Avatars In Collaborative Virtual Reality</h1>
+            <p>Keep These Things In Mind When Designing For A Co-op VR Experience!</p>
+        </div>
+    </div>
+
+    <div class="text-content">
+        <div class="project-meta">
+            <div><span class="label">Project name</span>Avatars In Collaborative Virtual Reality (VR)</div>
+            <div><span class="label">Date</span>23/03/2022</div>
+            <div><span class="label">Role</span>Games User Researcher, UI Designer, 3D Modeling,</div>
+            <div><span class="label">Client</span>Esri R&D Zürich</div>
+            <div><span class="label">Methods</span>Playtests (Observation), Interviews, Surveys, SUS</div>
+            <div><span class="label">Paper</span><a
+                    href="https://drive.google.com/file/d/1jsgq5Qqpfj8Nme2Ck5eSa40kkeeg9JgA/view" target="_blank"
+                    rel="noopener">PDF (German)</a></div>
+        </div>
+
+        <p>Digital tools are now widely used for planning environments and buildings. Esri R&D developed a tool for
+            viewing 3D landscapes and buildings in VR with others. A key question is how to represent participants
+            (avatars) in this virtual world. Avatars that are too abstract reduce immersion, while overly realistic
+            avatars can trigger the "Uncanny Valley" effect, especially with unnatural eyes. Personalizing avatars can
+            help reduce discomfort.</p>
+        <p>This project used an iterative process to design avatars, incorporating research and user testing to improve
+            acceptance. Tests showed the standard VR tour had a low SUS score of 55, but combining walking, teleporting,
+            and flying improved usability. Menus should be simplified, and hand-tracking control could enhance natural
+            interaction.</p>
+        <p>For avatars, one-time users may prefer simple, abstract representations, but allowing basic customization
+            like hand color can boost immersion. Regular participants benefit from personalized avatars to avoid ethnic
+            conflicts and reduce the Uncanny Valley effect. Highly realistic avatars should also resemble the user to
+            maintain comfort.</p>
+
+        <div class="media-block"><video autoplay loop muted playsinline src="assets/vr/vr_4.mp4"></video>
+            <div class="media-caption">This is one of the properties people were able to walk through together in VR in
+                one of the playtests.</div>
+        </div>
+        <h2>Avatar concept</h2>
+        <p>Based on the findings from the research and the development of the user-centered avatar prototypes, the
+            following recommendations can now be made. These recommendations can serve as a basis for further work with
+            avatars in collaborative applications such as a virtual tour of a building or environment.</p>
+
+        <h2>Handling</h2>
+        <p>Hand tracking should be used for VR building tours to improve natural interaction and immersion. Clear
+            onboarding at the start is essential to ease concerns. A mix of walking, teleporting, and flying works best
+            for navigation, with physical and VR walking available due to real space limits. Teleporting helps cover
+            long distances, but should be used sparingly by tour leaders. Flying offers unique views but may cause
+            discomfort for those with a fear of heights.</p>
+        <p>Walking through walls, ceilings, and windows was well-received in tests and speeds up building inspections.
+            Users should control this feature, and a map on-screen would help with orientation. Avatars should
+            automatically reset to the nearest floor after flying or teleporting to match real eye height and angles.
+        </p>
+        <p>A simple, language-specific menu without submenus could include options like "Onboarding," "Draft Mode," and
+            "Walk through walls." A meeting display should show participants and allow features like muting, teleporting
+            to others, or following a leader. Participants could use a design mode to view details about objects or
+            compare floor variants set by managers.</p>
+        <h2>Avatar Design</h2>
+        <p>Meeting participants in VR should avoid holding controllers, as it disrupts immersion without offering clear
+            benefits. Name tags above avatars, however, were practical and not distracting.
+
+        </p>
+        <p>Avatars should have a level of realism that matches the environment to prevent the Uncanny Valley effect. The
+            degree of realism used in the last user tests was appropriate, but avatars should not be too photorealistic.
+            To maintain immersion, avatars should resemble the person controlling them and wear business-like attire.
+            The avatars created in this project can be used with the suggested improvements.
+        </p>
+        <div class="media-block"><video autoplay loop muted playsinline src="assets/vr/vr_2.mp4"></video>
+            <div class="media-caption">Avatars in one of the playtests.</div>
+        </div>
+        <p>Face tracking could enhance VR meetings, but it may trigger the Uncanny Valley effect, so it should be tested
+            thoroughly before implementation.</p>
+        <p>A distinction should be made between one-time and regular participants. For regular participants, avatars
+            should resemble the person and include all ethnic characteristics to avoid conflicts and increase immersion.
+            One-time participants, like customers, prefer using standard avatars to save time. Neutral avatars, such as
+            those with grey skin from this project, work well for these users. These avatars can be distinguished by
+            name badges and pastel-colored shirts to keep the focus on the meeting.</p>
+        <div class="media-block"><video autoplay loop muted playsinline src="assets/vr/vr_3.mp4"></video>
+            <div class="media-caption">Generic avatars for one time participants in one of the playtests.</div>
+        </div>
+        <p>For better immersion, it may be useful for one-time participants to make a small choice, like selecting the
+            skin color for their hands in VR. Displaying controllers in the participant's view is also recommended
+            unless hand tracking is used. The VR controllers should match the ones being held and show a finger
+            animation when a button is pressed.</p>
+        <p><a href="https://drive.google.com/file/d/1jsgq5Qqpfj8Nme2Ck5eSa40kkeeg9JgA/view" target="_blank"
+                rel="noopener">Read the whole paper</a> (German)</p>
+        <div class="media-block"><video autoplay loop muted playsinline src="assets/vr/vr_1.mp4"></video>
+            <div class="media-caption">Hands and controllers in one of the playtests.</div>
+        </div>
+    </div>
+    
+
+    <div class="bottom-nav page-wrapper">
+        <a href="playtestcloud.html">← Previous: Leveling Up Game Testing</a>
+        <a href="website.html">Next: Website Redesign →</a>
+    </div>
 </body>
+
 </html>
