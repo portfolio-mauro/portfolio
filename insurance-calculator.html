@@ -1,16 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relaunch Insurance Calculator</title>
+    <title>Insurance Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header><nav><a href="index.html">Home</a></nav></header>
-    <main>
-        <h1>Relaunch Insurance Calculator</h1>
-        <p>Project details coming soon.</p>
-    </main>
+    <div class="hero">
+        <header><a href="index.html">Home</a></header>
+        <img src="assets/bilg/bilg1.webp" alt="VR avatars in a collaborative environment">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1>Insurance Calculator</h1>
+            <p>How I Generated 13K Insurance Conclusions In The First 6 Months!</p>
+        </div>
+    </div>
+
+    <div class="text-content">
+        <div class="project-meta">
+            <div><span class="label">Project name</span>Premium Calculator</div>
+            <div><span class="label">Date</span>2022 - 2023 (18 months)</div>
+            <div><span class="label">Role</span>Project Manager, User Researcher, UX Designer, UI Designer</div>
+            <div><span class="label"><a href="https://www.egk.ch/calculate" target="_blank">Website</a></span></div>
+        </div>
+        <h2>TLDR</h2>
+        <ul>
+            <li>Successfully launched 600k CHF project on time.</li>
+            <li>Generated 13K insurance conclusions in the first 6 months.</li>
+            <li>Conducted around 40 interviews and usability tests.</li>
+            <li>Our final product scored 86.5 (A) in the SUS.</li>
+            <li>Created surveys and led workshops regularly.</li>
+            <li>Did requirement engineering and stakeholder management.</li>
+        </ul>
+
+        <h2>Initial situation</h2>
+        <p>The previous Internet Premium Calculator (IPR), in its ninth year, had undergone updates but was based on an
+            outdated web service to our CRM and used the Silverstripe CMS.</p>
+        <p>The relaunch also presented opportunities to improve usability, boost sales, and standardize content
+            management systems.</p>
+
+        <div class="media-block"><video autoplay loop muted playsinline src="assets/ipr/ipr1.mp4"></video>
+            <div class="media-caption">Overview of the new insurance calculator interface.</div>
+        </div>
+
+        <h2>Goals</h2>
+        <ul>
+            <li>Increasing security</li>
+            <li>Increasing usability</li>
+            <li>Increasing insurance conclusions</li>
+            <li>Revision of the integration and solution architecture</li>
+            <li>Created surveys and led workshops regularly.</li>
+            <li>Standardization of content management systems within EGK</li>
+        </ul>
+
+        <h2>Results</h2>
+        <p>The project was overall a success, achieving all our goals and launching on time, although it was 10% over
+            budget, which I anticipated and addressed with the steering committee.</p>
+        <p>Key changes for end users included:</p>
+        <ul>
+            <li>Completing insurance applications online without a signature</li>
+            <li>Saving progress on calculations for later completion</li>
+            <li>Modifying existing quotes from either the user or sales staff</li>
+            <li>Enhanced usability and simplified insurance product names</li>
+            <li>Improved performance</li>
+            <li>Display of applicable discounts</li>
+            <li>Temporary storage and encryption of personal information</li>
+        </ul>
+
+        <div class="media-block"><video autoplay loop muted playsinline src="assets/ipr/ipr2.mp4"></video>
+            <div class="media-caption">A short video snippet from one of the usability tests. Captions are translated
+                from Swiss-German.</div>
+        </div>
+
+        <h2>Research approach</h2>
+        <p>Methods applied:</p>
+        <ul>
+            <li>A/B Testing</li>
+            <li>Affinity Maps</li>
+            <li>Ethnographic Field Study</li>
+            <li>Prototyping</li>
+            <li>Interviews</li>
+            <li>Sketches</li>
+            <li>Surveys</li>
+            <li>Usability Tests</li>
+            <li>User Flows</li>
+            <li>Wireframing</li>
+        </ul>
+
+        <p>I started with usability tests on our current premium calculator, reviewed past research, and conducted
+            interviews to understand where users get insurance quotes and what they like about those sites. I also
+            surveyed EGK’s sales and office team for insights.</p>
+        <p>With this research, we drafted the specifications, and I developed sketches and wireframes. A low-fidelity
+            prototype helped align the team, and after a few iterations, we began usability testing with it.</p>
+        <p>Working with our external front-end partner, we created a high-fidelity prototype and tested it. The final
+            product scored 86.5 (A) on the System Usability Scale (SUS). We also ran an A/B test to settle debates on
+            price display.</p>
+        <p>Throughout the project, I conducted about 40 usability tests and interviews, using Figma prototypes or the
+            current build to focus on user needs and identify potential issues.</p>
+
+        <h2>Project structure</h2>
+        <p>The project team included members from four companies. Internally, it consisted of IT (myself, the head of
+            IT, and two developers), along with representatives from marketing, legal, product, and sales. Externally,
+            one company handled the frontend, another the backend, and a third the new CRM web service.</p>
+        <p>We used a mix of Scrum and Kanban and set SMART goals to measure at the project's end.</p>
+        <p>Workshops were key early on, and we held three main types of meetings:</p>
+        <ul>
+            <li>Weekly project status: PM (me), lead frontend, lead backend</li>
+            <li>Bi-Weekly Integration & Operations</li>
+            <li>Bi-Weekly Sprint Review</li>
+        </ul>
+
+        <h2>Issues / Learnings</h2>
+        <p>In no particular order.</p>
+        <p>Lack of a budget buffer led to going over budget at the end.</p>
+        <p>Scope creep was challenging. Prioritizing features was tough, but upcoming releases helped manage
+            expectations by assuring future inclusion.</p>
+        <p>The tight timeline, driven by the new data protection law and insurance sales season, meant not all features
+            could be included in the first release.</p>
+        <p>Delays from external companies led to missing deadlines, so we used a manual CSV upload to keep the project
+            moving while the web service was finalized for the second release.</p>
+        <p>Legal questions take a lot of time</p>
+        <p>Some usability issues couldn't be addressed due to conflicts with the marketing strategy, but plans for a
+            color-blind version were discussed for a future release.</p>
+        <p>Writing test cases alongside the specifications would have saved time.</p>
+        <p>Early QA planning is crucial. We had to rely on coworkers unfamiliar with testing, some of whom expected a
+            flawless tool, resulting in inefficient testing.</p>
+
+        <div class="image-slider">
+            <div class="slider-wrapper">
+                <button class="slider-btn slider-btn-prev" aria-label="Previous image">❮</button>
+                <div class="slider-container">
+                    <div class="slides-wrapper">
+                        <img class="slide" src="assets/ipr/ipr4.webp" alt="Premium Calculator - Screenshot 1">
+                        <img class="slide" src="assets/ipr/ipr6.webp" alt="Premium Calculator - Screenshot 2">
+                        <img class="slide" src="assets/ipr/ipr7.webp" alt="Premium Calculator - Screenshot 3">
+                        <img class="slide" src="assets/ipr/ipr8.webp" alt="Premium Calculator - Screenshot 4">
+                        <img class="slide" src="assets/ipr/ipr9.webp" alt="Premium Calculator - Screenshot 5">
+                        <img class="slide" src="assets/ipr/ipr10.webp" alt="Premium Calculator - Screenshot 6">
+                        <img class="slide" src="assets/ipr/ipr11.webp" alt="Premium Calculator - Screenshot 7">
+                        <img class="slide" src="assets/ipr/ipr12.webp" alt="Premium Calculator - Screenshot 8">
+                        <img class="slide" src="assets/ipr/ipr13.webp" alt="Premium Calculator - Screenshot 9">
+                    </div>
+                </div>
+                <button class="slider-btn slider-btn-next" aria-label="Next image">❯</button>
+            </div>
+            <div class="slider-indicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+                <span class="indicator" data-index="3"></span>
+                <span class="indicator" data-index="4"></span>
+                <span class="indicator" data-index="5"></span>
+                <span class="indicator" data-index="6"></span>
+                <span class="indicator" data-index="7"></span>
+                <span class="indicator" data-index="8"></span>
+            </div>
+        </div>
+
+
+        <div class="bottom-nav page-wrapper">
+            <a href="gur.html">← Testing Jurassic World</a>
+            <a href="other-projects.html">Avatars in VR →</a>
+        </div>
+
+        <script src="main.js"></script>
 </body>
+
 </html>
