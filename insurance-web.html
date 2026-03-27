@@ -1,16 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Relaunch</title>
+    <title>Relaunch EGK Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header><nav><a href="index.html">Home</a></nav></header>
-    <main>
-        <h1>Website Relaunch</h1>
-        <p>Project details coming soon.</p>
-    </main>
+    <div class="hero">
+        <header><a href="index.html">Home</a></header>
+        <img src="assets/insurance_web/insurance_web3.webp" alt="Insurance Website">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1>Relaunch EGK Website</h1>
+            <p>How I Increased User Retention By 15%!</p>
+        </div>
+    </div>
+
+    <div class="text-content">
+        <div class="project-meta">
+            <div><span class="label">Project name</span>Relaunch EGK Website & Optimization of Premium Calculator</div>
+            <div><span class="label">Date</span>2018 - 2021 (18 months)</div>
+            <div><span class="label">Role</span>UX Researcher, UI Designer, UX Designer, Requirements Engineering,
+                Frontend Developer</div>
+            <div><span class="label">Websites</span><a href="https://www.egk.ch" target="_blank">Main Website</a> & <a
+                    href="https://www.egk.ch/calculate" target="_blank">Insurance Calculator</a></div>
+        </div>
+
+        <p>Originally, the main website and the premium calculator were created with SilverStripe. In 2018, we began
+            transitioning to a new CMS, Pimcore, starting with the main page and planning to follow with the calculator.
+        </p>
+        <p>Before selecting a partner and CMS, my team and I gathered requirements through meetings, user research, and
+            workshops. We identified a need for comparing insurance products, determining agency responsibilities by
+            geography, and using videos for clearer product explanations.</p>
+        <p>My role involved compiling functional and non-functional requirements, analyzing the existing website and
+            customer needs, prototyping ideas, and organizing workshops.</p>
+        <p>Now, as the product owner of both the calculator and main website, I’ve advocated for user research, leading
+            to interviews and usability tests that have improved our products. One card sorting workshop resulted in a
+            complete overhaul of the website’s information architecture, making it much easier for customers to
+            navigate.</p>
+
+        <div class="image-slider">
+            <div class="slider-wrapper">
+                <button class="slider-btn slider-btn-prev" aria-label="Previous image">❮</button>
+                <div class="slider-container">
+                    <div class="slides-wrapper">
+                        <img class="slide" src="assets/insurance_web/insurance_web8.webp" alt="Insurance Website">
+                        <img class="slide" src="assets/insurance_web/insurance_web9.webp" alt="Insurance Website">
+                        <img class="slide" src="assets/insurance_web/insurance_web10.webp" alt="Insurance Website">
+                        <img class="slide" src="assets/insurance_web/insurance_web11.webp" alt="Insurance Website">
+                        <img class="slide" src="assets/insurance_web/insurance_web12.webp" alt="Insurance Website">
+                    </div>
+                </div>
+                <button class="slider-btn slider-btn-next" aria-label="Next image">❯</button>
+            </div>
+            <div class="slider-indicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+                <span class="indicator" data-index="3"></span>
+                <span class="indicator" data-index="4"></span>
+            </div>
+        </div>
+
+        <p>Since only the main website got moved to another CMS so far and the premium calculator stayed, my task was to
+            optimize this calculator without generating a lot of work. This because the calculator will be transferred
+            soon as well.</p>
+        <h2>Some key take aways from the user research (usability tests & interviews)</h2>
+        <ul>
+            <li>basic insurance before additional insurance</li>
+            <li>color separation unclear</li>
+            <li>info blocks had to be improved</li>
+            <li>benefits of additional insurance unclear</li>
+            <li>mobile use was difficult</li>
+        </ul>
+
+        <h2>Further adaptions</h2>
+        <ul>
+            <li>reusing product icons from the app and home page</li>
+            <li>added links for booking an appointment or to get in touch</li>
+            <li>forms simplified</li>
+            <li>added hover effects for unselecting products</li>
+            <li>further design adaptions</li>
+        </ul>
+        <p>These adaptions were enough to increase user retention by 15% on the premium calculator.</p>
+
+        <div class="wireframe-grid">
+            <div>
+                <h2>Before</h2>
+                <img src="assets/insurance_web/insurance_web1.webp" alt="Insurance Calculator Before">
+            </div>
+            <div>
+                <h2>After</h2>
+                <img src="assets/insurance_web/insurance_web2.webp" alt="Insurance Calculator After">
+            </div>
+        </div>
+
+        <h2>Mobile Version</h2>
+
+
+        <div class="image-slider">
+            <div class="slider-wrapper">
+                <button class="slider-btn slider-btn-prev" aria-label="Previous image">❮</button>
+                <div class="slider-container">
+                    <div class="slides-wrapper">
+                        <img class="slide" src="assets/insurance_web/insurance_web4.webp" alt="Insurance Website">
+                        <img class="slide" src="assets/insurance_web/insurance_web5.webp" alt="Insurance Website">
+                        <img class="slide" src="assets/insurance_web/insurance_web6.webp" alt="Insurance Website">
+                        <img class="slide" src="assets/insurance_web/insurance_web7.webp" alt="Insurance Website">
+                    </div>
+                </div>
+                <button class="slider-btn slider-btn-next" aria-label="Next image">❯</button>
+            </div>
+            <div class="slider-indicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+                <span class="indicator" data-index="3"></span>
+            </div>
+        </div>
+
+
+        <div class="bottom-nav page-wrapper">
+            <a href="vr.html">← Avatars in VR</a>
+            <a href="bilg.html">Mobile Grocery App →</a>
+        </div>
+
+        <script src="main.js"></script>
 </body>
+
 </html>
