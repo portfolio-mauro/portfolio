@@ -118,15 +118,6 @@ header nav {
     color: #feb94a;
 }
 
-.arrow {
-    font-size: 44px;
-    vertical-align: middle;
-    display: inline-block;
-    transition: transform 0.3s;
-    margin-left: 8px;
-}
-
-
 main>.profile,
 main>.projects {
     margin-top: 100vh;
@@ -325,9 +316,9 @@ footer {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 20px;
-    left: 50%;
+    left: 20px;
     z-index: 20;
 }
 
@@ -340,6 +331,7 @@ header a {
     color: #fff;
     font-weight: 600;
     letter-spacing: 0.04em;
+    text-decoration: none;
 }
 
 .hero {
@@ -386,14 +378,6 @@ header a {
     letter-spacing: 0.04em;
 }
 
-.subtitle {
-    text-align: center;
-    margin: 40px auto 16px;
-    font-size: 1.05rem;
-    font-weight: 300;
-    max-width: 900px;
-}
-
 .text-content {
     max-width: 920px;
     margin: 0 auto 40px;
@@ -408,11 +392,19 @@ header a {
     color: #fff;
 }
 
-.text-content p {
+.text-content p,
+.text-content li {
     color: #e6e6e6;
     font-weight: 300;
     line-height: 1.7;
     font-size: 1.1rem;
+}
+
+.text-content > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
 }
 
 .wireframe-grid {
@@ -421,6 +413,16 @@ header a {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 24px;
+}
+
+.wireframe-grid > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.wireframe-grid > div img {
+    width: 100%;
+    height: auto;
 }
 
 .wireframe-grid img {
@@ -460,6 +462,7 @@ header a {
 .scope-content ul {
     margin-top: 12px;
     padding-left: 1.1rem;
+    font-size: 1.1rem;
     color: #e6e6e6;
     font-weight: 300;
     line-height: 1.7;
@@ -477,10 +480,6 @@ header a {
     display: flex;
     align-items: center;
     gap: 28px;
-}
-
-.split-content--reverse {
-    flex-direction: row-reverse;
 }
 
 .split-text {
@@ -502,6 +501,7 @@ header a {
 .split-media {
     flex: 1 1 420px;
     max-width: 600px;
+    position: relative;
 }
 
 .split-media img,
@@ -510,12 +510,10 @@ header a {
     height: auto;
     display: block;
     border-radius: 8px;
-    border: 1px solid #252525;
 }
 
 @media (max-width: 930px) {
-    .split-content,
-    .split-content--reverse {
+    .split-content {
         flex-direction: column;
     }
 
@@ -542,42 +540,54 @@ header a {
     text-transform: uppercase;
     letter-spacing: 0.07em;
     margin-right: 6px;
-    font-size: 0.84rem;
+    font-size: 1.1rem;
 }
 
 .media-block {
     flex: 1;
-    background: #111;
+    background: #1d1d1d;
     overflow: hidden;
     border-radius: 8px;
-    border: 1px solid #252525;
     position: relative;
+}
+
+.video-wrapper {
+    position: relative;
+    display: block;
 }
 
 .video-controls {
     position: absolute;
-    bottom: 12px;
-    left: 12px;
+    bottom: 10px;
+    left: 10px;
     display: flex;
-    gap: 8px;
-    background: rgba(0, 0, 0, 0.52);
-    padding: 6px 8px;
-    border-radius: 8px;
+    gap: 6px;
     z-index: 10;
 }
 
-.video-controls button {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    padding: 5px 10px;
+.video-ctrl-btn {
+    background: #1d1d1d;
+    border: none;
+    padding: 4px!important;
     border-radius: 4px;
-    font-size: 0.86rem;
+    padding: 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.15s;
 }
 
-.video-controls button:hover {
-    background: rgba(255, 255, 255, 0.12);
+.video-ctrl-btn:hover {
+    opacity: 1;
+}
+
+.video-ctrl-btn img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.8));
+    display: block;
 }
 
 .media-block video {
@@ -688,23 +698,6 @@ a {
     }
 
     .projects-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        width: 96vw;
-        align-items: stretch;
-        justify-items: center;
-    }
-
-    .project-card {
-        width: 48vw;
-        max-width: 100%;
-        min-width: 0;
-        align-items: center;
-        margin: 0;
-    }
-
-    .projects-grid {
         grid-template-columns: 1fr;
         gap: 16px;
         width: 96vw;
@@ -731,12 +724,7 @@ a {
         max-width: 100vw;
     }
 
-    .footer-right {
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .project-title-overlay {
+.project-title-overlay {
         display: block !important;
         font-size: 18px;
         bottom: 0;
@@ -779,10 +767,9 @@ a {
     flex: 1;
     max-width: 920px;
     height: 85vh;
-    background: #111;
+    background: #1d1d1d;
     overflow: hidden;
     border-radius: 8px;
-    border: 1px solid #252525;
 }
 
 .slides-wrapper {
@@ -795,12 +782,29 @@ a {
     height: 100%;
     width: 100%;
     display: none;
-    object-fit: contain;
-    background: #111;
+    flex-direction: column;
+    background: #1d1d1d;
+    overflow: hidden;
 }
 
 .slide.active {
-    display: block;
+    display: flex;
+}
+
+.slide img {
+    flex: 1 1 0;
+    width: 100%;
+    min-height: 0;
+    object-fit: contain;
+}
+
+.slide-caption {
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    color: #c3c3c3;
+    font-weight: 300;
+    flex-shrink: 0;
 }
 
 .slider-btn {
@@ -864,8 +868,7 @@ a {
 /* Mobile optimization for slider */
 @media (max-width: 500px) {
     .slider-wrapper {
-        flex-direction: column;
-        align-items: stretch;
+        gap: 8px;
     }
 
     .slider-container {
@@ -873,24 +876,121 @@ a {
     }
 
     .slider-btn {
-        padding: 10px 12px;
-        font-size: 20px;
-        align-self: center;
-        width: fit-content;
-    }
-
-    .slider-btn-prev {
-        order: -1;
-        margin-bottom: 12px;
-    }
-
-    .slider-btn-next {
-        order: 1;
-        margin-top: 12px;
+        padding: 8px 10px;
+        font-size: 18px;
+        flex-shrink: 0;
     }
 
     .indicator {
         width: 6px;
         height: 6px;
+    }
+}
+
+/* Lightbox */
+.lightbox-trigger {
+    cursor: zoom-in;
+}
+
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+    cursor: default;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    color: #feb94a;
+}
+
+.lightbox-video {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 4px;
+    cursor: default;
+}
+
+/* Project page helper — half-width centered media block */
+.media-block--half {
+    width: 50%;
+    justify-self: center;
+}
+
+/* Project pages — mobile */
+@media (max-width: 767px) {
+    .hero-text {
+        padding: 0 20px;
+        box-sizing: border-box;
+        bottom: 8%;
+    }
+
+    .text-content {
+        padding: 0 16px;
+    }
+
+    .split-section {
+        padding: 0 16px;
+    }
+
+    .scope-layout {
+        flex-direction: column;
+    }
+
+    .scope-layout img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .wireframe-grid {
+        flex-direction: column;
+    }
+
+    .wireframe-grid img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .wireframe-grid > div {
+        width: 100%;
+    }
+
+    .bottom-nav {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .media-block--half {
+        width: 100%;
+        justify-self: unset;
     }
 }
